@@ -5,6 +5,7 @@ public class BoxersList<T> {
 	@SuppressWarnings({ })
 	private BoxerNode<T> first;
 	
+	@SuppressWarnings("unused")
 	private int count;
 
 	public BoxersList() {

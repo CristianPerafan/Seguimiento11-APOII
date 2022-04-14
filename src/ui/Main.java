@@ -12,20 +12,23 @@ import model.GameController;
 public class Main {
 	
 	private static Scanner sc;
-	@SuppressWarnings("unused")
 	private  GameController controller;
 	
 	private boolean win;
 	
+	//Constructo method
 	public Main() {
 		sc = new Scanner(System.in);
 		controller = new GameController();
 		win = false;
 	}
 	
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String [] args) {
 		
-		@SuppressWarnings("unused")
 		Main pc = new Main();
 		
 		System.out.println("Enter the number of rows: ");
@@ -47,11 +50,20 @@ public class Main {
 		}while(option != 3);
 	
 	}
-	
+	/**
+	 * This method is created to initialize the values ​​of the game
+	 * @param numRows
+	 * @param numColumns
+	 * @param playerName
+	 */
 	public void toSetUpGame(int numRows, int numColumns, String playerName) {
 		controller.toCreateGameBoard(numRows, numColumns,playerName);
 	}
 	
+	/**
+	 * 
+	 * @return option,
+	 */
 	public int showGameOptions() {
 		int option = 3;
 		if(win == false) {
@@ -66,6 +78,10 @@ public class Main {
 		return option;
 	}
 	
+	/**
+	 * 
+	 * @param option
+	 */
 	public void executeOperation(int option) {
 		switch(option) {
 		case 1:

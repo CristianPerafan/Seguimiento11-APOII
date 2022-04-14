@@ -3,14 +3,11 @@ package model;
 public class BoxerNode<T>{
 	
 	private T date;
-	private int count;
 	
 	private BoxerNode<T> next;
 	
 	public BoxerNode(T date) {
 		this.date = date;
-		count = 1;
-		
 	}
 
 	public T getDate() {
